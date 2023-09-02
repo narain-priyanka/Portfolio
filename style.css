@@ -125,11 +125,11 @@
     content: "who i am";
 }
 
-.skills .skills-content{
+.about .about-content{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .about .about-content{
@@ -190,7 +190,7 @@
 
 /* all similar styling sections */
 .section{
-    padding: 100px o;
+    padding: 100px 0;
 }
 
 section .title{
@@ -229,15 +229,20 @@ section .title::after{
 
 /* skill section styling */
 .skills{
-    margin-top: 40px;
-    /* height: 550px; */
     color : white;
     background:black;
 }
 
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .skills .title::before{
     background: white;
-}
+} 
 
 .skills .title::after{
     background:black;
@@ -246,7 +251,7 @@ section .title::after{
 
 .skills .skills-content{
     display: flex;
-    margin: 10px 40px 20px 20px;
+    margin: 0 30px;
 }
 
 .skills .skills-content .card{
@@ -256,6 +261,7 @@ section .title::after{
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
+    margin-bottom: 60px;
     cursor: pointer;
 }
 
@@ -271,6 +277,7 @@ section .title::after{
 .skills .skills-content .card:hover{
     color:crimson;
 }
+
 .skills .skills-content .card:hover .box{
     transform: scale(1.05);
 }
@@ -285,7 +292,6 @@ section .title{
     text-align: center;
     font-size: 40px;
     font-weight:500;
-    /* margin-top: 35px; */
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
@@ -313,20 +319,35 @@ section .title::after{
     transform: translateX(-50%);
 }
 
-.reach .reach-content .card .box .text{ 
+.reach .reach-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reach .reach-content .right{
+    display: flex;
+}
+
+.reach .reach-content .right .text{ 
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    color: black;
 }
 
-.reach .reach-content .card .box{
-    display: inline-flex;
-    margin: 10px 40px 20px 20px;
+.reach .reach-content{
+    transition: all 0.3s ease;
 }
 
-/* .reach .reach-content .card{
-    display: flex;
-} */
+.reach .reach-content:hover{
+    color:black;
+}
+
+.reach .reach-content .card:hover .box{
+    transform: scale(1.05);
+}
 
 /* responsive media query */
 @media (max-width: 1300px){
@@ -418,6 +439,21 @@ section .title::after{
         width: 100%;
         margin-bottom: 20px;
     }
+/* 
+    .reach .reach-content .card{
+        width: 100%;
+        margin-bottom: 20px;
+    } */
+
+    .reach .reach-content .column .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .reach .reach-content .column .right{
+        flex: 100%;
+    }
 
 }
 
@@ -426,21 +462,25 @@ section .title::after{
     .max-width{
         padding: 0 23px;
     }
-
     .home .home-content .text-2{
         font-size: 60px;
     }
-
     .home .home-content .text-3{
         font-size: 32px;
     }
-
     .home .home-content a{
         font-size: 23px;
         padding: 8px 22px;
     }
     .skills .skills-content .card{
         width: 100%;
+    }
+    .reach .reach-content .column .left{
+        width:100%
+    }
+
+    .reach .reach-content .column .right{
+        flex: 100%;
     }
 }
 
@@ -449,7 +489,6 @@ section .title::after{
     .home .home-content .text-2{
         font-size: 50px;
     }
-
     .home .home-content .text-3{
         font-size: 27px;
     }
