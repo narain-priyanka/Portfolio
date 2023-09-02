@@ -337,12 +337,15 @@ section .title::after{
     color: black;
 }
 
-.reach .reach-content .right .box .text{
+.reach .reach-content .right .box .text i{
     transition: all 0.3s ease;
+    font-size:25px;
+    color:crimson;
 }
 
 .reach .reach-content box:hover{
-    color:black;
+    /* color:black; */
+    color:crimson;
 }
 
 .reach .reach-content .box:hover .text{
