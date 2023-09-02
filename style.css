@@ -333,19 +333,19 @@ section .title::after{
 .reach .reach-content .right .text{ 
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    margin-right: 20px;
+    margin-right: 10px;
     color: black;
 }
 
-.reach .reach-content{
+.reach .reach-content .right .box .text{
     transition: all 0.3s ease;
 }
 
-.reach .reach-content:hover{
+.reach .reach-content box:hover{
     color:black;
 }
 
-.reach .reach-content .card:hover .box{
+.reach .reach-content .box:hover .text{
     transform: scale(1.05);
 }
 
@@ -439,11 +439,6 @@ section .title::after{
         width: 100%;
         margin-bottom: 20px;
     }
-/* 
-    .reach .reach-content .card{
-        width: 100%;
-        margin-bottom: 20px;
-    } */
 
     .reach .reach-content .column .left{
         display: flex;
@@ -478,9 +473,8 @@ section .title::after{
     .reach .reach-content .column .left{
         width:100%
     }
-
     .reach .reach-content .column .right{
-        flex: 100%;
+        width: 100%;
     }
 }
 
